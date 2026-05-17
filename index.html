@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>SOC App</title>
+    
+    <!-- Apple Progressive Web App Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="SOC App">
+    <link rel="apple-touch-icon" href="icon-512.png">
+    
+    <!-- Web Manifest Connection -->
+    <link rel="manifest" href="manifest.json">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #FFFFFF;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        /* Container forces layout to respect iOS safe zones (Notches/Dynamic Islands) */
+        .app-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            height: -webkit-fill-available;
+            padding-top: env(safe-area-inset-top);
+            box-sizing: border-box;
+        }
+        iframe {
+            border: none;
+            width: 100%;
+            flex-grow: 1;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Embedded Coca-Cola AppSheet Campaign Link -->
+        <iframe src="https://www.appsheet.com/start/34a08434-bdc0-48ac-aeeb-105556139215" allow="geolocation; camera"></iframe>
+    </div>
+</body>
+</html>
